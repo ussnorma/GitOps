@@ -3,7 +3,7 @@ name: Hello to CLI
 on:
   push:
     branches:
-    - main
+    - scripts
 
 jobs:
   say_hello:

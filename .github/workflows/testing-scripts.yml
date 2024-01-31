@@ -3,7 +3,7 @@ name: Testing Go scripts
 on:
   push:
     branches:
-    - main
+    - scripts
 
 jobs:
   testing:
