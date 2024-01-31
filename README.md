@@ -1,5 +1,5 @@
 # link to github repo with all assigments (1-4)
-![GitHub-04.GitOps](https://github.com/ussnorma/GitOps)
+![GitHub](https://github.com/ussnorma/GitOps)
 
 ## Branch purpose:
 ## scripts - branch which includes golang scripts and workflows wich usin scripts.
