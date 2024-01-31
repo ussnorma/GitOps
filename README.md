@@ -6,4 +6,4 @@
 
 ## development - branch which include static website and workflow. This brunch is used for tests.
 
-## hot-fix - branch is used for hot fix.
+## hot-fix - branch is used for hot fix .
