@@ -41,7 +41,7 @@ jobs:
       - name: The job has failed
         if: ${{ failure() }}
         run: echo fails
-  pull_request_to_main:
+  merge_to_production:
     runs-on: ubuntu-latest
     needs: [build, deploy, tests]
     if: contains(needs.tests.result, 'success' ) 
