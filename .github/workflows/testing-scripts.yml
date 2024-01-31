@@ -1,0 +1,25 @@
+name: Testing Go scripts
+
+on:
+  push:
+    branches:
+    - scripts
+
+jobs:
+  testing:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install golang
+        uses: actions/setup-go@v4
+        with:
+          go-version: '1.21.x'
+      - run: go version 
+      - name: Init workspace 
+        run: sudo go work init ./scripts ./tests
+      - name: Run tests
+        run: cd ./tests && sudo go test -v > tests_report.log
+      - name: Upload report
+        uses: actions/upload-artifact@v2
+        with:
+          path: ./tests/tests_report.log
