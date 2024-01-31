@@ -1,0 +1,24 @@
+name: Hello to CLI
+
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  say_hello:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install golang
+        uses: actions/setup-go@v3
+        with:
+          go-version: '1.21.1'
+      - run: go version
+      - name: Run hello-actions script
+        run: sudo go run hello_actions.go 
+      - run: sudo go run hello_actions.go > hello_report.log
+      - name: Upload report
+        uses: actions/upload-artifact@v2
+        with:
+          path: ./hello_report.log
