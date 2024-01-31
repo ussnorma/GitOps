@@ -54,3 +54,5 @@ jobs:
           from_branch: development
           target_branch: production
           github_token: ${{ secrets.MERGE_TOKEN }}
+
+        
